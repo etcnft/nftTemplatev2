@@ -1,0 +1,48 @@
+/* ProjectDetails.module.css */
+
+.projectDetails {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f1f5f2;
+    border-radius: 60px 20px 25px 20px;
+    border: 5px ridge black;
+}
+  
+  .projectDetails h2 {
+    color: var(--accent-color);
+  }
+
+  
+  .projectDetails p {
+    color: var( --black-accent-color);
+    margin-bottom: 20px;
+  }
+
+  
+  .projectDetails .features {
+    margin-top: 20px;
+  }
+  
+  .projectDetails .features h3 {
+    color: var(--accent-color);
+  }
+  
+  .projectDetails .features ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .projectDetails .features li {
+    margin-bottom: 8px;
+    color: #666;
+  }
+  
+  @media (max-width: 600px){
+    .projectDetails:hover {
+      box-shadow: 0 0 20px rgba(255, 165, 0, 0.8); /* Orange glow effect */
+      height: 400px;
+      width: 250px;
+    } 
+
+  }

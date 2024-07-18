@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Concert+One&family=Lato:wght@300;400&family=Roboto:wght@500&family=Titan+One&display=swap');
+
+:root {
+  --font-primary: 'Roboto', sans-serif;
+  --font-secondary: 'Lato', sans-serif;
+  --font-third: 'Concert One', cursive;
+  --font-code: 'Roboto', sans-serif;
+  --bg-color: #571dca;
+  --font-color: #ffffff;
+  --btn-bg-color: #ffffff;
+  --accent-color: #7c3cfd;
+  --black-accent-color: #212121;
+  --header-shadow: #000 0px 0px 5px;
+  --shadow-color: #91bbc9;
+}
+
+html,
+body {  
+  max-width: 100%;
+  background-image: url(/images/backgrounds/background.jpg);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  background-color: var(--accent-color);
+  flex-flow: column;
+  height: 100vh;
+  color: var(--font-color);
+  font-family: var(--font-primary);
+  text-decoration: none;
+  
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* unvisited link */
+a:link {
+  text-decoration: none;
+  color:var(--bg-color)
+  /* Your other link styles */
+}
+
+/* visited link */
+a:visited {
+  text-decoration: none;
+  color:var(--bg-color)
+  /* Use the same styles as unvisited links */
+} 
+
+a {
+  color: var(--accent-color);
+  text-decoration: none;
+}

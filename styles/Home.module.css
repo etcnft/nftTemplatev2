@@ -1,0 +1,734 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(3px);
+  margin: 10vh auto; /* Center horizontally and give top and bottom margin in viewport height units */
+  padding: 20px; /* Add padding as needed */
+  border: 5px solid var(--black-accent-color);
+  border-radius: 25px;
+  max-width: 800px; /* Optional: Set a maximum width for the container */
+  margin-bottom: 600px;
+
+}
+
+.stakingContainer {
+  display: block;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(3px);
+  padding: 20px; /* Add padding as needed */
+  border: 5px solid var(--black-accent-color);
+  border-radius: 25px;
+  max-width: 900px; /* Optional: Set a maximum width for the container */
+}
+
+.divider {
+  width: 90%;
+  border: 5px solid rgb(255, 255, 255);
+  border-radius: 10px;
+}
+
+.nftBoxGrid {
+  max-width: 900px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 2%;
+  margin-top: 5px;
+  flex-wrap: wrap;
+}
+
+.nftBox {
+  display: grid;
+  border-radius: 10px;
+  border: 3px solid #ccc;
+  background-color: var(--bg-color);
+  max-width: 200px;
+  align-items: center;
+  align-content: center;
+  align-self: center;
+  justify-content: center;
+  margin-bottom: 5px;
+
+}
+
+.stakingContainer h2{
+  margin: 1px;
+}
+.squareSection {
+  max-width: 900px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center; /* Align squares to the right */
+  flex-wrap: wrap;
+  text-align: center;
+  margin: 0 auto; /* Center the squares horizontally */
+}
+
+.gradientText0 {
+  background: -webkit-linear-gradient(#bfa3da, #84309c, #c735b0);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gradientText1 {
+  background: -webkit-linear-gradient(#a79af9, #7aa8d2);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gradientText2 {
+  background: -webkit-linear-gradient(#bfa3da, #743f93);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gradientText3 {
+  background: -webkit-linear-gradient(#c35ab1, #e9a8d9);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.title a:hover,
+.title a:focus,
+.title a:active {
+  text-decoration: underline;
+  text-decoration-color: #84309c;
+}
+
+.title {
+  line-height: 1.15;
+  font-size: 4rem;
+}
+
+.title,
+.description {
+  text-align: left;
+}
+
+.connect {
+  margin-bottom: 2rem;
+}
+
+.description {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  line-height: 1.5;
+  font-size: 1.5rem;
+}
+
+.code {
+  background: #555;
+  border-radius: 5px;
+  padding: 0.5em;
+  font-size: 1.1rem;
+}
+
+.grid {
+  display: flex;
+  justify-content: left;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.card {
+  position: relative;
+  background-color: rgba(0, 0, 0, .1);
+  border-radius: 10em;
+  border: 5px solid var(--black-accent-color);
+  box-shadow: var(--card-shadow);
+  padding: 5em;
+  transition: all 0.5s ease-in-out;
+}
+
+.cardText {
+  padding: 1rem;
+}
+
+.card img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 4px 4px 0 0;
+  margin-bottom: 12px;
+  border: none;
+}
+
+.card:hover,
+.card:focus,
+.card:active {
+  background-color: #272c34;
+  opacity: 80%;
+}
+
+.card h2 {
+  margin: 0 0 0.75rem 0;
+}
+
+.card p {
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.75;
+}
+
+.logo {
+  height: 1em;
+  margin-left: 0.5rem;
+}
+.optionSelectBox {
+  border-radius: 16px;
+  border: 1px solid #ccc;
+  width: 48%;
+  min-height: 200px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-left: 12px;
+  padding-right: 12px;
+  cursor: pointer;
+}
+
+.selectBoxTitle {
+  font-size: 1.75rem;
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+
+.selectBoxDescription {
+  color: rgba(255, 255, 255, 0.9);
+  margin-top: 0px;
+}
+
+.tokenGrid {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 1%;
+  width: 100%;
+  max-width: 95vw;
+  flex-wrap: wrap;
+  margin: 16px 0;
+}
+
+.tokenItem {
+  width: 100%;
+  height: 70px;
+  border-radius: 16px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(255, 255, 255, 1);
+  background-color: var(--black-accent-color);
+
+}
+
+.tokenLabel {
+  margin-top: 0px;
+  margin-bottom: 0px;
+  margin-right: 15px;
+  font-weight: 600;
+  color: var(--accent-color);
+}
+
+.tokenValue {
+  font-size: 1.3rem;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  font-weight: 500;
+}
+
+.spacerTop {
+  margin-top: 10px;
+}
+.bigSpacerTop {
+  margin-top: 32px;
+}
+
+.spacerBottom {
+  margin-bottom: 16px;
+}
+
+.detailPageHr {
+  margin-top: 0px;
+  margin-bottom: 32px;
+}
+
+.nftMedia {
+  max-width: 120px;
+  height: 120px!important;
+  border-radius:60px;
+  justify-self: center;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.15); /* Add a subtle shadow for depth */
+  border: 4px solid #fff; /* Thicker border for prominence */
+  margin: 3px;
+}
+
+@media (max-width: 768px) {
+  .header {
+    margin-left: 0;
+  }
+  .grid {
+    width: 100%;
+    flex-direction: column;
+  }
+  .title {
+    font-size: 3rem;
+    line-height: 1.15;
+  }
+}
+
+.card,
+.footer {
+  border-color: #222;
+}
+.logo img {
+  filter: invert(1);
+}
+
+.main{
+  display: flex;
+  min-height: 800px;
+  flex-direction: column;
+  width: 100%;
+  margin:  90px auto;
+  margin-top: 70px;
+  align-items: center;
+  margin-bottom: 180px;
+}
+
+/* NOT CONNECTED */
+.not-connected {
+  align-items: center;
+  height: 100%;
+  text-align: center;
+  opacity: 0;
+  transform: translateY(10vh);
+  transition: all 0.5s ease-in-out;
+  align-self: center;
+  justify-self: center;
+}
+
+.show-not-connected {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.not-connected h1 {
+  text-shadow: 2px 2px 0 var(--bg-color);
+  margin: 2rem 0;
+  font-size: 4em;
+}
+
+.not-connected p {
+  font-size: 1.1rem;
+  font-family: var(--font-secondary);
+  line-height: 1.8;
+}
+
+.not-connected a {
+  text-decoration: none;
+  color: var(--bg-color);
+  font-size: 2.5rem;
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Add this line to center the container horizontally */
+  justify-content: center; /* Add this line to center the container vertically */
+  text-align: center; /* If needed for text alignment */
+  justify-self: center;
+  
+}
+
+.countdown {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(3px);
+  margin: 5px;
+  border-radius: 5%;
+  border: 5px solid var(--black-accent-color);
+  box-shadow: var(--card-shadow);
+  padding: 2em;
+  transition: all 0.5s ease-in-out;
+  max-width: 350px; /* Set the maximum width */
+}
+
+
+.countdown_buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  margin-top: 1rem;
+}
+
+.countdown_buttons .button-group {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  margin-top: 1rem;
+}
+.count-down{
+  justify-content: center;
+  text-align: center;
+}
+
+.countdown ul {
+  display: flex;
+  gap: .1rem 
+}
+.countdown .clock-item {
+  
+  list-style: none;
+  width: 70px;
+  height: auto;
+}
+
+.countdown .clock-item .count-number {
+  
+  color: var(--black-accent-color);
+  font-size: 1.5rem;
+  font-weight: 700;
+  font-family: var(--font-secondary);
+  padding: 1rem;
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+  line-height: 1;
+  border-radius: 4px 4px 0 0;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+.countdown .clock-item .count-text {
+  background: var(--accent-color);
+  font-family: var(--font-secondary);
+  font-size: 1.1rem;
+  color: var(--font-color);
+  padding: 0.5rem 0.7rem;
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+  line-height: 1;
+  border-radius: 0 0 4px 4px;
+}
+
+.countdown h1 {
+  text-shadow: 2px 2px 0 var(--accent-color);
+  font-style: normal;
+  margin: 2rem 0;
+  font-size: 4rem;
+  text-align: center;
+  
+}
+
+.countdown h2 {
+  font-family: var(--font-primary);
+  font-style:normal;
+  margin: 0;
+  font-size: 1.5rem;
+  text-align: center;
+  margin-bottom: 5%;
+}
+.countdown h3 {
+  font-family: var(--font-third);
+  font-style:normal;
+  margin: 5px;
+  font-size: 1rem;
+  text-align: center;
+  margin-bottom: 5px;
+}
+.countdown h4 {
+  font-family: var(--font-code);
+  font-style:normal;
+  margin: 0;
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 5%;
+}
+
+.countdown p {
+  font-size: 1.3rem;
+  font-family: var(--font-third);
+  margin-bottom: 1rem;
+  text-align: center;
+  
+}
+
+/* MINT CONTAINER */
+
+.mintcontainer {
+  width: 90%;
+  max-width: 100%; /* Set maximum width to 100% */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 10px;
+}
+
+.infocontainer {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  text-align: center;
+  margin-bottom: 5px;
+ 
+}
+.progressbar {
+  width: 100%;
+  height: 20px;
+  background-color: #ccc;
+}
+
+.progress {
+  width: 0%;
+  height: 100%;
+  background-color: #d70e80;
+}
+
+
+.mintqty {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  border-radius: 5px;
+}
+
+.mintqty > span {
+  display: flex;
+}
+
+.mintbtn {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+  margin: auto;
+}
+
+.inputnumber {
+  height: 100%;
+  padding: 1rem;
+  vertical-align: top;
+  text-align: center;
+  outline: none;
+}
+
+.inputnumber,
+.inputnumberdecrement,
+.inputnumberincrement {
+  user-select: none;
+}
+
+.totalpricecontainer {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 1rem 0 2rem;
+}
+
+.totalpricecontainer p {
+  color: var(--font-color);
+}
+
+.btn{
+  display: inline-block;
+  padding: .3rem 1rem;
+  background: var(--btn-bg-color);
+  color: var(--bg-color);
+  font-family: var(--font-secondary);
+  font-style: italic;
+  font-weight: bold;
+  font-size: 1rem;
+  text-transform: capitalize;
+  transition: all 0.3s ease;
+  box-shadow: 2px 2px 0 0 var(--shadow-color);
+  cursor: pointer;
+  position: relative;
+  text-decoration: none;
+  outline: none;
+}
+
+.herobtn {
+  border-radius: 3px;
+  font-size: 1.25rem;
+  padding: .5rem 2rem;
+} 
+.btn:hover {
+  box-shadow: 0 0 2px 2px var(--shadow-color);
+  color: var(--black-accent-color);
+}
+
+
+.footer1,
+.footer2,
+.footer {
+  text-align: center;
+  justify-content: center;
+  gap: 1rem;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  color: var(--font-color);
+  font-family: var(--font-primary);
+  font-size: 10px;
+  padding: 1px;
+  align-items: center; /* Add this line to center the items horizontally */
+}
+
+.footer {
+  flex-shrink: 0;
+  padding: 1rem;
+  color: var(--font-color);
+  font-family: var(--font-primary);
+  background-color: rgba(0, 0, 0, 1);
+}
+
+.footer1 a,
+.footer2 a,
+.footer a {
+  text-decoration: none;
+  color: #fff; /* Set link color to white */
+}
+
+.icons-footer {
+  display: flex;
+  column-gap: 25px;
+}
+
+.icon-footer {
+  display: inline-flex;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  outline-offset: 4px;
+  outline: 2px solid #FFF;
+  transition-property: outline-offset, outline-color, background-color;
+  transition-duration: 0.25s;
+}
+
+.icon-footer:hover {
+  outline-offset: 8px;
+}
+
+.icon-footer i {
+  margin: auto;
+}
+
+.icon-footer:hover i {
+  animation: swell 0.25s;
+}
+
+.hidden {
+  display: none;
+}
+
+.content {
+  flex: 1;
+  /* Add additional styling for your content */
+}
+
+.roadmapContainer {
+  max-width: 700px;
+  margin: 10px auto; /* Center the container horizontally */
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Center the content vertically */
+  text-align: center; /* Center the content horizontally */
+  margin-top: 20px; /* Adjust the top margin as needed */
+  border: 5px solid var(--black-accent-color);
+  border-radius: 25px;
+  overflow: hidden; /* Ensure the content is contained within the container */
+  background-color: #7aa8d2;
+}
+.roadmap {
+  width: 700px;
+  margin: 10px auto; /* Center the container horizontally */
+  text-align: center; /* Center the content horizontally */
+  margin-top: 20px; /* Adjust the top margin as needed */
+  border: 5px solid var(--black-accent-color);
+  border-radius: 25px;
+  overflow: hidden; /* Ensure the content is contained within the container */
+  background-color: #54a047;
+  font-style: var(--font-third);
+  margin-bottom: 100px;
+}
+
+.roadmap h1 {
+  font-size: 2em; /* Example font size for the heading */
+  margin-bottom: 20px; /* Adjust spacing below the heading */
+}
+
+.roadmap ul {
+  list-style: none; /* Remove default list styling */
+  padding: 0; /* Remove default list padding */
+  text-align: left; /* Left-align the list items */
+}
+
+.roadmap li {
+  position: relative;
+  font-size: 1em; /* Use font third for the list items */
+  margin-bottom: 15px; /* Adjust spacing between list items */
+}
+
+.roadmap li::before {
+  content: ""; /* Empty content for the bullet replacement */
+  display: inline-block;
+  width: 25px; /* Adjust the width of the bullet replacement */
+  height: 25px; /* Adjust the height of the bullet replacement */
+  background-size: cover; /* Ensure the image covers the bullet area */
+  margin-right: 20px; /* Adjust spacing between the image and the text */
+  margin-left: 10px;
+}
+
+.roadmapImage {
+  max-width: 100%; /* Make sure the image doesn't exceed the container's width */
+  justify-self: center;
+  align-self: center;
+}
+
+.inputField {
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+
+@media (min-height: 780px) {
+  .footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+  }
+
+  
+}
+@media (max-width: 700px){
+.roadmapContainer {
+  width: 90%;
+}
+.roadmap{
+  width: 90%;
+}
+}

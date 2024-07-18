@@ -1,0 +1,112 @@
+
+.transferLabel {
+  margin-right: 8px; /* Adjust the value as needed for the desired spacing */
+}
+.coverImage {
+  width: 100%;
+  background-color: #272a2d;
+  height: 100px;
+  border-radius: 16px;
+}
+.descriptionTitle{
+  justify-self: center;
+  text-align: center;
+  
+}
+.profilePicture {
+  width: 100px;
+  height: 100px;
+  border-radius: 100px;
+  vertical-align: inherit;
+  outline: 3px solid rgba(255, 255, 255, 0.1);
+  margin-top: -72px;
+  margin-left: 5%;
+}
+
+.profileName {
+  margin-left: 2.5%;
+}
+
+.tabs {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.6);
+  margin-top: 16px;
+  margin-bottom: 16px;
+}
+
+.tab {
+  padding: 16px;
+  font-size: 16px;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.6);
+  cursor: pointer;
+  transition: color 0.1s ease-in-out;
+}
+
+.tab:hover {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.activeTab {
+  color: rgba(255, 255, 255, 1);
+  border-bottom: 2px solid #0294fe;
+  color: #0294fe;
+}
+
+.tabContent {
+  display: none;
+  height: 0px;
+  opacity: 0;
+  transition: all 0.1s linear;
+}
+
+.activeTabContent {
+  display: flex;
+  flex-direction: row;
+  align-items: center; /* Center vertically */
+  opacity: 1;
+  flex-wrap: wrap;
+  background-color: rgba(0, 0, 0, 0.8);
+  border-radius: 20px;
+}
+
+.activeTabContent h3{
+  font-size: 1.5em;
+}
+
+.data{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  gap: 60px;
+  
+}
+
+.btn {
+  display: inline-block;
+  padding: 3px 10px;
+  background: var(--btn-bg-color);
+  color: var(--bg-color);
+  font-family: var(--font-secondary);
+  font-style: italic;
+  font-weight: bold;
+  font-size: 1.2rem;
+  text-transform: capitalize;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  position: relative;
+  text-decoration: none;
+  outline: none;
+  border-radius: 20px 5px 10px 5px;
+  margin: 10px;
+}
+
+@media (max-width: 960px) {
+  .activeTabContent h3{
+    font-size: 1em;
+  }
+}

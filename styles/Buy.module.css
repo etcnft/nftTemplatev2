@@ -1,0 +1,108 @@
+.nftGridContainer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 5px;
+  width: 100%;
+  justify-self: center;
+  justify-content: space-evenly;
+}
+
+.nftContainer {
+  margin: 4px;
+  overflow: hidden;
+  border-radius: 8px;
+  backface-visibility: hidden;
+  outline: 1px solid rgba(255, 255, 255, 0.1);
+  transform: translate3d(0px, 0px, 0px);
+  display: flex;
+  flex-direction: column;
+  padding: 8px;
+  max-height: 382px;
+  transition: all 0.25s ease-in-out;
+  background: var(--accent-color);
+}
+.projectContainer {
+  min-width: 150px;
+  margin: 4px;
+  border-radius: 8px;
+  backface-visibility: hidden;
+  transform: translate3d(0px, 0px, 0px);
+  display: flex;
+  flex-direction: column;
+  padding: 2px;
+  max-height: 382px;
+  transition: all 0.25s ease-in-out;
+}
+
+.projectContainer:hover {
+  cursor: pointer;
+  transform: translate3d(0px, -4px, 0px);
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+.nftContainer:hover {
+  cursor: pointer;
+  transform: translate3d(0px, -4px, 0px);
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.title {
+  padding: 8px;
+  font-size: 3rem;
+  margin-bottom: 8px;
+}
+
+.sortButtons {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.sortButtons button {
+  margin: 2px auto;
+  padding: 10px;
+  background-color: var(--btn-bg-color);
+  color: var(--bg-color);
+  font-family: var(--font-primary);
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  border-radius: 5px;
+}
+
+.sortButtons button:hover {
+  background-color: var(--accent-color);
+  color: var(--font-color);
+}
+
+.sortButtons activeButton {
+  background-color: var(--accent-color);
+  color: var(--font-color);
+}
+/* Responsive */
+
+@media (min-width: 1200px) {
+  .nftContainer {
+    width: 12%;
+  }
+}
+
+@media (min-width: 760px) and (max-width: 1200px) {
+  .nftContainer {
+    width: 15%;
+  }
+}
+
+@media (min-width: 600px) and (max-width: 760px) {
+  .nftContainer {
+    width: 29%;
+  }
+}
+
+/* Less than 600 */
+@media (max-width: 700px) {
+  .nftContainer {
+    width: 40%;
+  }
+}
