@@ -59,28 +59,16 @@ const MintContainer: React.FC<MintContainerProps> = ({ contract , isLoading, err
       // PUBLIC MINT  
       try {
         const receiver = userAddress;
-        console.log("Receiver:", receiver);
-
         const qty = BigInt(quantity);
-        console.log("Quantity:", qty, ", ", quantity); // Ensure this is a BigNumberish type
-
         const currency = "0xeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee"; // Native ETC address
-        console.log("Currency:", currency);
-
         const pricePerToken = ethers.utils.parseEther(mintPrice.toString());
-        console.log("Price Per Token:", pricePerToken);
-
         const allowlistProof = {
           proof: [], // Replace with the actual proof
           quantityLimitPerWallet: BigInt(maxPerWallet), // Ensure this is a BigNumberish type
           pricePerToken: ethers.utils.parseEther(pricePerToken.toString()),
           currency: "0xeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee" // Native ETC address
         };
-        console.log("Allowlist Proof:", allowlistProof);
-
         const data = "0x"; // Replace with actual data if needed
-        console.log("Data:", data);
-
 
         const mintTransaction = await contract?.call("claim", [
           receiver,
@@ -92,9 +80,6 @@ const MintContainer: React.FC<MintContainerProps> = ({ contract , isLoading, err
         ], {
           value: ethers.utils.parseEther(totalPrice.toString()), 
         });
-
-        console.log("Sent Mint: ", mintTransaction)
-
 
         if(mintTransaction) {
           console.log("MINT SUCCESS")
