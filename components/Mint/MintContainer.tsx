@@ -4,8 +4,11 @@ import { ethers } from "ethers";
 import styles from "../../styles/Home.module.css";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import { NFT_ADDRESS, title, description, welcome, maxSupply, mintPrice } from "../../const/contractAddresses";
-
+import { NFT_ADDRESS, title, description, welcome, maxSupply, mintPrice, maxPerWallet } from "../../const/contractAddresses";
+import { useSendTransaction } from "thirdweb/react";
+import { claimTo } from "thirdweb/extensions/erc721";
+import { useAddress } from "@thirdweb-dev/react";
+import { on } from "events";
 
 interface MintContainerProps {
   contract: any; // Adjust the type based on your contract
@@ -15,10 +18,12 @@ interface MintContainerProps {
 
 const MintContainer: React.FC<MintContainerProps> = ({ contract , isLoading, error}) => {
 
+  const userAddress = useAddress();
    //Increment Section
    const [quantity, setQuantity] = useState<number>(1); // Specify quantity as a number
    const [totalPrice, setTotalPrice] = useState<number>(1.2); // Specify totalPrice as a number
    const [mintedSuccess, setMintedSuccess] = useState(false);
+
    
   useEffect(() => {
     // Update total price whenever quantity changes
@@ -26,7 +31,7 @@ const MintContainer: React.FC<MintContainerProps> = ({ contract , isLoading, err
   }, [quantity]);
 
   const handleIncrement = () => {
-    setQuantity((prevQuantity) => Math.min(prevQuantity + 1, 20));
+    setQuantity((prevQuantity) => Math.min(prevQuantity + 1, 5));
   };
 
   const handleDecrement = () => {
@@ -34,7 +39,7 @@ const MintContainer: React.FC<MintContainerProps> = ({ contract , isLoading, err
   };
 
   const handleSetMax = () => {
-    setQuantity(20);
+    setQuantity(5);
   };
 
   //MINT
@@ -53,9 +58,43 @@ const MintContainer: React.FC<MintContainerProps> = ({ contract , isLoading, err
     if (true) {
       // PUBLIC MINT  
       try {
-        const mintTransaction = await contract?.call("mint", [quantity], {
+        const receiver = userAddress;
+        console.log("Receiver:", receiver);
+
+        const qty = BigInt(quantity);
+        console.log("Quantity:", qty, ", ", quantity); // Ensure this is a BigNumberish type
+
+        const currency = "0xeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee"; // Native ETC address
+        console.log("Currency:", currency);
+
+        const pricePerToken = ethers.utils.parseEther(mintPrice.toString());
+        console.log("Price Per Token:", pricePerToken);
+
+        const allowlistProof = {
+          proof: [], // Replace with the actual proof
+          quantityLimitPerWallet: BigInt(maxPerWallet), // Ensure this is a BigNumberish type
+          pricePerToken: ethers.utils.parseEther(pricePerToken.toString()),
+          currency: "0xeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee" // Native ETC address
+        };
+        console.log("Allowlist Proof:", allowlistProof);
+
+        const data = "0x"; // Replace with actual data if needed
+        console.log("Data:", data);
+
+
+        const mintTransaction = await contract?.call("claim", [
+          receiver,
+          qty,
+          currency,
+          pricePerToken,
+          allowlistProof,
+          data
+        ], {
           value: ethers.utils.parseEther(totalPrice.toString()), 
-         });
+        });
+
+        console.log("Sent Mint: ", mintTransaction)
+
 
         if(mintTransaction) {
           console.log("MINT SUCCESS")
@@ -73,7 +112,7 @@ const MintContainer: React.FC<MintContainerProps> = ({ contract , isLoading, err
             progress: undefined,
             theme: "light",
           });
-          const url = `https://blockscout.com/etc/mainnet/tx/${mintTransaction.receipt.transactionHash}`;
+          const url = '' //`https://blockscout.com/etc/mainnet/tx/${mintTransaction.receipt.transactionHash}`;
           setMintedSuccess(true);
           
           const mintedContainer = document.querySelector('minted-container');
@@ -89,7 +128,7 @@ const MintContainer: React.FC<MintContainerProps> = ({ contract , isLoading, err
             mintedContainer.classList.remove('hidden');
           }
         
-          console.log("Minted successfully!", `Transaction Hash: ${mintTransaction.receipt.transactionHash}`);
+          //console.log("Minted successfully!", `Transaction Hash: ${mintTransaction.receipt.transactionHash}`);
         } else {
           const mainText = document.getElementById("mainText");
           if (mainText){
