@@ -12,7 +12,7 @@ export const ETHERSCAN_URL = "https://etc-mordor.blockscout.com";
 export const MARKETPLACE_ADDRESS = "";
 export const NFT_ADDRESS = "0xD7BfC3360138C78F7c286C755964c45BB35cA6a0";
 export const REWARDSADDRESS = "";
-export const stakingContractAddress = "";
+export const stakingContractAddress = "0x9E30F684E03774D0380aa6c6A8151e4789b98a6d";
 export const tokenContractAddress = "";
 
 //3. Descriptions

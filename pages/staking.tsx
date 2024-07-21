@@ -118,13 +118,13 @@ import Link from "next/link";
         <div className={stylesHome.main}>
         
                 <div className={stylesHome.stakingContainer}>
-                    <h1 className={stylesHome.h1}>STAKE YOUR FROGGIES</h1>
-                    <p style={{color:"gold", fontWeight:'bolder', fontSize:'large'}}>Rate: 4.2069 Mon/Froggie/Day</p>
+                    <h1 className={stylesHome.h1}>STAKE YOUR NFT</h1>
+                    <p style={{color:"gold", fontWeight:'bolder', fontSize:'large'}}>Rate: 4.2069 Token/NFT/Day</p>
                     {!address ? (
                         <ConnectWallet />
                     ) : (
                         <>
-                            <h2>Your Mon</h2>
+                            <h2>Your Token Rewards</h2>
                             <div className={stylesHome.tokenGrid}>
                                 <div className={stylesHome.tokenContainer}>
                                     <div className={stylesHome.tokenItem}>
@@ -163,7 +163,7 @@ import Link from "next/link";
 
 
                             <hr className={`${stylesHome.divider} ${stylesHome.spacerTop}`} />
-                            <h2>Your Staked Froggies</h2>
+                            <h2>Your Staked NFTs</h2>
                             <div className={stylesHome.nftBoxGrid}>
                                 {stakedTokens &&
                                     stakedTokens[0]?.map((stakedToken: BigNumber) => (
@@ -174,7 +174,7 @@ import Link from "next/link";
                             </div>
 
                             <hr className={`${stylesHome.divider} ${stylesHome.spacerTop}`} />
-                            <h2>Your Unstaked Froggies</h2>
+                            <h2>Your Unstaked NFTs</h2>
                             <div className={stylesHome.nftBoxGrid}>
                                 {ownedNfts?.map((nft) => (
                                     <div className={stylesHome.nftBox} key={nft.metadata.id.toString()}>
